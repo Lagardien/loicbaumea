@@ -97,6 +97,17 @@ $white: #fff;
   }
 }
 
+/* Image loading */
+
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
 /* Cursor */
 
 .page {
@@ -757,19 +768,14 @@ footer {
       }
     }
     .project-media {
-      text-align: center;
       img {
-        width: 80%;
+        width: 100%;
         &.small {
-          width: 80%;
+          width: 100%;
         }
       }
 
       .project-link {
-        text-align: center;
-        width: max-content;
-        display: block;
-        margin: 30px auto;
         font-size: 5vw;
       }
 
