@@ -689,7 +689,12 @@ footer {
         bottom: 20px;
       }
       .headline {
-        top: 150px;
+        position: relative;
+        font-size: 75px;
+
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 100px;
       }
 
       .left-p {
@@ -697,13 +702,13 @@ footer {
       }
 
       .right-p {
-        font-size: 5vw;
-
         position: relative;
-        top: 200px;
+        top: 0;
         left: 0;
         right: 0;
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 25px;
         text-align: center;
       }
     }
