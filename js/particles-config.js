@@ -37,7 +37,8 @@ export function Particles() {
             nb_sides: 1
           },
           image: {
-            src: "http://loicbaumea.com/img/avatar.png",
+            src:
+              "https://eloquent-davinci-3d0dc2.netlify.com/avatar.bfc6f9d1.png",
             width: 100,
             height: 100
           }
