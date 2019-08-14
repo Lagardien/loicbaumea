@@ -728,9 +728,54 @@ footer {
       margin: 10px 5px;
     }
 
-    .grid {
-      width: 250px;
-      margin: 0 auto;
+    // .grid {
+    //   width: 250px;
+    //   margin: 0 auto;
+    // }
+  }
+
+  .project-content {
+    font-size: 5vw;
+    padding: 50px;
+    padding-top: 150px;
+    .next-project {
+      margin-top: 25px;
+      text-align: right;
+    }
+    h2 {
+      font-size: 9vw;
+      text-align: center;
+    }
+    .project-presentation {
+      display: block;
+      p {
+        width: 100%;
+      }
+
+      ul {
+        padding-left: 0;
+      }
+    }
+    .project-media {
+      text-align: center;
+      img {
+        width: 80%;
+        &.small {
+          width: 80%;
+        }
+      }
+
+      .project-link {
+        text-align: center;
+        width: max-content;
+        display: block;
+        margin: 30px auto;
+        font-size: 5vw;
+      }
+
+      &.media-flex {
+        display: block;
+      }
     }
   }
 }
