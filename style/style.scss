@@ -664,8 +664,8 @@ footer {
       li {
         margin-right: 25px;
 
-        p {
-          font-size: 28px;
+        .menu-item {
+          font-size: 26px;
         }
       }
     }
@@ -683,6 +683,7 @@ footer {
   }
 
   .home {
+    height: -webkit-fill-available;
     .home-content {
       #home-video {
         bottom: 20px;
