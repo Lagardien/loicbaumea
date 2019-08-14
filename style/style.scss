@@ -448,14 +448,14 @@ footer {
 .projects-content {
   text-align: center;
   p {
-    font-size: 2rem;
+    font-size: 3vw;
   }
   padding: 100px;
 
   .button {
     display: inline-block;
     padding: 10px;
-    margin: 10px 30px;
+    margin: 10px 20px;
     background: none;
     border: none;
     color: $blue;
@@ -713,6 +713,24 @@ footer {
         margin: 0 auto;
         text-align: center;
       }
+    }
+  }
+
+  .projects-content {
+    p {
+      font-size: 2rem;
+    }
+    padding: 50px;
+    padding-top: 100px;
+
+    .button {
+      padding: 5px;
+      margin: 10px 5px;
+    }
+
+    .grid {
+      width: 250px;
+      margin: 0 auto;
     }
   }
 }
