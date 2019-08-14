@@ -86,4 +86,12 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
   if (document.querySelector(".grid")) {
     const UniversalTilt = require("universal-tilt.js");
   }
+
+  $(function() {
+    $(".lazy").lazy({
+      effect: "fadeIn",
+      effectTime: 2000,
+      threshold: 0
+    });
+  });
 });
