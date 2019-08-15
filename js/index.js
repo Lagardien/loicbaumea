@@ -6,13 +6,9 @@ $(window).on("load", function() {
 
 /* media fade in */
 
-$("video")
+$(".home-video")
   .hide()
-  .one("load", function() {
-    $(this)
-      .hide()
-      .fadeIn("slow");
-  });
+  .fadeIn("slow");
 
 /* Cursor */
 
@@ -61,9 +57,6 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
       if (this.complete) $(this).trigger("load");
     });
 
-  $(".about-bg")
-    .hide()
-    .fadeIn("slow");
   // Check Active Link
   for (let i = 0; i < links.length; i++) {
     const link = links[i];
