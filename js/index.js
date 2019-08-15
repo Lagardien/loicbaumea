@@ -4,11 +4,16 @@ $(window).on("load", function() {
   $(".loader-wrapper").fadeOut("slow");
 });
 
-/* Image fade in */
+/* media fade in */
 
-$("img").on("load", function() {
-  $("img").fadeIn("slow");
-});
+$("video")
+  .hide()
+  .one("load", function() {
+    $(this).fadeIn(500);
+  })
+  .each(function() {
+    if (this.complete) $(this).trigger("load");
+  });
 
 /* Cursor */
 
@@ -83,11 +88,21 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
     const UniversalTilt = require("universal-tilt.js");
   }
 
-  $("img").on("load", function() {
-    $("img").fadeIn("slow");
-  });
+  $("img")
+    .hide()
+    .one("load", function() {
+      $(this).fadeIn(500);
+    })
+    .each(function() {
+      if (this.complete) $(this).trigger("load");
+    });
 
-  $(".about-bg").on("load", function() {
-    $(".about-bg").fadeIn("slow");
-  });
+  $(".about-bg")
+    .hide()
+    .one("load", function() {
+      $(this).fadeIn(500);
+    })
+    .each(function() {
+      if (this.complete) $(this).trigger("load");
+    });
 });
