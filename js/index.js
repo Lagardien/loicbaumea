@@ -6,6 +6,14 @@ $(window).on("load", function() {
 
 /* media fade in */
 
+$("video")
+  .hide()
+  .one("load", function() {
+    $(this)
+      .hide()
+      .fadeIn("slow");
+  });
+
 /* Cursor */
 
 import Cursor from "./cursor";
