@@ -1,16 +1,5 @@
 import TweenMax from "gsap/TweenMax";
 
-/**
- * demo.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2019, Codrops
- * http://www.codrops.com
- */
-
 class Cursor {
   constructor() {
     this.initDemo();
@@ -22,10 +11,6 @@ class Cursor {
     this.cursorWrapper = document.querySelector(".cursor-wrapper");
     this.innerCursor = document.querySelector(".custom-cursor__inner");
     this.outerCursor = document.querySelector(".custom-cursor__outer");
-
-    this.cursorWrapperBox = this.cursorWrapper.getBoundingClientRect();
-    this.innerCursorBox = this.innerCursor.getBoundingClientRect();
-    this.outerCursorBox = this.outerCursor.getBoundingClientRect();
 
     document.addEventListener("mousemove", e => {
       this.clientX = e.clientX;
@@ -71,21 +56,12 @@ class Cursor {
     mainNavItems.forEach(el => {
       el.addEventListener("mouseenter", () => {
         this.mainNavHoverTween.play();
+        console.log("mouseenter");
       });
       el.addEventListener("mouseleave", () => {
         this.mainNavHoverTween.reverse();
+        console.log("mouseleave");
       });
-    });
-
-    this.bumpCursorTween = TweenMax.to(this.outerCursor, 0.1, {
-      scale: 0.7,
-      paused: true,
-      onComplete: () => {
-        TweenMax.to(this.outerCursor, 0.2, {
-          scale: 1,
-          ease: this.easing
-        });
-      }
     });
   }
 }
