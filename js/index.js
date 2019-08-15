@@ -6,14 +6,9 @@ $(window).on("load", function() {
 
 /* Image fade in */
 
-$("img")
-  .hide()
-  .one("load", function() {
-    $(this).fadeIn(500);
-  })
-  .each(function() {
-    if (this.complete) $(this).trigger("load");
-  });
+$("img").on("load", function() {
+  $("img").fadeIn("slow");
+});
 
 /* Cursor */
 
@@ -77,15 +72,6 @@ H.on("NAVIGATE_OUT", ({ from, trigger, location }) => {});
 // Listen the `NAVIGATE_END` event
 // This event is sent everytime the `done()` method is called in the `in()` method of a transition
 H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
-  $("img")
-    .hide()
-    .one("load", function() {
-      $(this).fadeIn(500);
-    })
-    .each(function() {
-      if (this.complete) $(this).trigger("load");
-    });
-
   if (document.querySelector(".page")) {
     const cursor = new Cursor();
   }
@@ -96,4 +82,12 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
   if (document.querySelector(".grid")) {
     const UniversalTilt = require("universal-tilt.js");
   }
+
+  $("img").on("load", function() {
+    $("img").fadeIn("slow");
+  });
+
+  $(".about-bg").on("load", function() {
+    $(".about-bg").fadeIn("slow");
+  });
 });
