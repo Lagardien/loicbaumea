@@ -6,9 +6,14 @@ $(window).on("load", function() {
 
 /* Image fade in */
 
-$("img").on("load", function() {
-  $("img").fadeIn("slow");
-});
+$("img")
+  .hide()
+  .one("load", function() {
+    $(this).fadeIn(500);
+  })
+  .each(function() {
+    if (this.complete) $(this).trigger("load");
+  });
 
 /* Cursor */
 
@@ -72,6 +77,15 @@ H.on("NAVIGATE_OUT", ({ from, trigger, location }) => {});
 // Listen the `NAVIGATE_END` event
 // This event is sent everytime the `done()` method is called in the `in()` method of a transition
 H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
+  $("img")
+    .hide()
+    .one("load", function() {
+      $(this).fadeIn(500);
+    })
+    .each(function() {
+      if (this.complete) $(this).trigger("load");
+    });
+
   if (document.querySelector(".page")) {
     const cursor = new Cursor();
   }
