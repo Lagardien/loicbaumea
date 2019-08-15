@@ -6,15 +6,9 @@ $(window).on("load", function() {
 
 /* media fade in */
 
-$("video")
-  .hide()
-  .one("load", function() {
-    $(this).fadeIn(500);
-  })
-  .each(function() {
-    if (this.complete) $(this).trigger("load");
-  });
-
+$(window).on("load", function() {
+  $(".home-video").fadeIn("slow");
+});
 /* Cursor */
 
 import Cursor from "./cursor";
@@ -88,21 +82,11 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
     const UniversalTilt = require("universal-tilt.js");
   }
 
-  $("img")
-    .hide()
-    .one("load", function() {
-      $(this).fadeIn(500);
-    })
-    .each(function() {
-      if (this.complete) $(this).trigger("load");
-    });
+  $(window).on("load", function() {
+    $("img").fadeIn("slow");
+  });
 
-  $(".about-bg")
-    .hide()
-    .one("load", function() {
-      $(this).fadeIn(500);
-    })
-    .each(function() {
-      if (this.complete) $(this).trigger("load");
-    });
+  $(window).on("load", function() {
+    $(".about-bg").fadeIn("slow");
+  });
 });
