@@ -4,14 +4,10 @@ $(window).on("load", function() {
   $(".loader-wrapper").fadeOut("slow");
 });
 
-/* Image loading */
+/* Image fade in */
 
-$(function() {
-  $(".lazy").lazy({
-    effect: "fadeIn",
-    effectTime: 2000,
-    threshold: 0
-  });
+$("img").on("load", function() {
+  $("img").fadeIn("slow");
 });
 
 /* Cursor */
@@ -86,12 +82,4 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
   if (document.querySelector(".grid")) {
     const UniversalTilt = require("universal-tilt.js");
   }
-
-  $(function() {
-    $(".lazy").lazy({
-      effect: "fadeIn",
-      effectTime: 2000,
-      threshold: 0
-    });
-  });
 });
