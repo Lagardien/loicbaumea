@@ -43,6 +43,7 @@ const links = document.querySelectorAll("nav a");
 // Listen the `NAVIGATE_IN` event
 // This event is sent everytime a `data-router-view` is added to the DOM Tree
 H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
+  //img fadein
   $("img")
     .hide()
     .one("load", function() {
@@ -51,6 +52,10 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
     .each(function() {
       if (this.complete) $(this).trigger("load");
     });
+
+  $(".about-bg")
+    .hide()
+    .fadeIn("slow");
   // Check Active Link
   for (let i = 0; i < links.length; i++) {
     const link = links[i];
