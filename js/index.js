@@ -4,11 +4,9 @@ $(window).on("load", function() {
   $(".loader-wrapper").fadeOut("slow");
 });
 
-/* media fade in */
-
-$(".home-video")
-  .hide()
-  .fadeIn("slow");
+$(".home-video").one("load", function() {
+  $(this).fadeIn("slow");
+});
 
 /* Cursor */
 
@@ -47,18 +45,19 @@ const links = document.querySelectorAll("nav a");
 // Listen the `NAVIGATE_IN` event
 // This event is sent everytime a `data-router-view` is added to the DOM Tree
 H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
-  $(".about-bg")
-    .hide()
-    .fadeIn("slow");
   //img fadein
   $("img")
     .hide()
     .one("load", function() {
-      $(this).fadeIn(500);
+      $(this).fadeIn("slow");
     })
     .each(function() {
       if (this.complete) $(this).trigger("load");
     });
+
+  $(".about-bg").one("load", function() {
+    $(this).fadeIn("slow");
+  });
 
   // Check Active Link
   for (let i = 0; i < links.length; i++) {
@@ -73,6 +72,7 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
     }
   }
 
+  //particles
   if (document.querySelector(".home")) {
     let particles = Particles();
   }
