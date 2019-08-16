@@ -4,10 +4,6 @@ $(window).on("load", function() {
   $(".loader-wrapper").fadeOut("slow");
 });
 
-$(".home-video").one("load", function() {
-  $(this).fadeIn("slow");
-});
-
 /* Cursor */
 
 import Cursor from "./cursor";
@@ -55,9 +51,19 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
       if (this.complete) $(this).trigger("load");
     });
 
-  $(".about-bg").one("load", function() {
-    $(this).fadeIn("slow");
-  });
+  // About-bg fadein
+
+  var image = new Image();
+  var element = document.getElementsByClassName("about-bg")[0];
+
+  image.onload = function() {
+    console.log("loaded image");
+    element.style.backgroundImage = "url('" + this.src + "')";
+    element.style.opacity = 1;
+  };
+  image.src =
+    "https://eloquent-davinci-3d0dc2.netlify.com/about-bg.beb021b0.jpg";
+  if (image.complete) image.onload();
 
   // Check Active Link
   for (let i = 0; i < links.length; i++) {
