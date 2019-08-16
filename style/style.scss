@@ -398,10 +398,11 @@ footer {
     background-size: cover;
     background-position: -100px 0;
     border-radius: 50%;
-    opacity: 0.5;
+    opacity: 0;
     mix-blend-mode: hard-light;
   }
   .about-bg:hover:before {
+    opacity: 1;
     animation: animate 0.2s linear infinite;
   }
   @keyframes animate {
