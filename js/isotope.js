@@ -2,7 +2,6 @@ export function Isotope() {
   // init Isotope
   var $grid = $(".grid").isotope({
     itemSelector: ".element-item"
-    //   layoutMode: "fitRows"
   });
   // filter items on button click
   $(".filters-button-group").on("click", "button", function() {
@@ -11,6 +10,10 @@ export function Isotope() {
       filter: filterValue
     });
   });
+
+  // layout Isotope
+
+  $grid.isotope("layout");
 
   $(".button-group").each(function(i, buttonGroup) {
     var $buttonGroup = $(buttonGroup);
