@@ -11,9 +11,10 @@ export function Isotope() {
     });
   });
 
-  // layout Isotope
-
-  $grid.isotope("layout");
+  // layout Isotope after each image loads
+  $grid.imagesLoaded().progress(function() {
+    $grid.isotope("layout");
+  });
 
   $(".button-group").each(function(i, buttonGroup) {
     var $buttonGroup = $(buttonGroup);
