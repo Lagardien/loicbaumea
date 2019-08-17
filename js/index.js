@@ -52,18 +52,19 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
     });
 
   // About-bg fadein
+  if (document.querySelector(".about")) {
+    var image = new Image();
+    var element = document.getElementsByClassName("about-bg")[0];
 
-  var image = new Image();
-  var element = document.getElementsByClassName("about-bg")[0];
-
-  image.onload = function() {
-    console.log("loaded image");
-    element.style.backgroundImage = "url('" + this.src + "')";
-    element.style.opacity = 1;
-  };
-  image.src =
-    "https://eloquent-davinci-3d0dc2.netlify.com/about-bg.beb021b0.jpg";
-  if (image.complete) image.onload();
+    image.onload = function() {
+      console.log("loaded image");
+      element.style.backgroundImage = "url('" + this.src + "')";
+      element.style.opacity = 1;
+    };
+    image.src =
+      "https://eloquent-davinci-3d0dc2.netlify.com/about-bg.beb021b0.jpg";
+    if (image.complete) image.onload();
+  }
 
   // Check Active Link
   for (let i = 0; i < links.length; i++) {
