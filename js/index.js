@@ -2,10 +2,6 @@
 
 $(window).on("load", function() {
   $(".loader-wrapper").fadeOut("slow");
-
-  $("video").on("load", function() {
-    $(this).fadeIn("slow");
-  });
 });
 
 /* Cursor */
