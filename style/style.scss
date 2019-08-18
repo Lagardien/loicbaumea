@@ -102,7 +102,7 @@ $white: #fff;
 .page {
   &,
   a {
-    cursor: none !important;
+    // cursor: none !important;
   }
 
   .cursor-wrapper {
@@ -120,25 +120,6 @@ $white: #fff;
     pointer-events: none;
     &.has-blend-mode {
       mix-blend-mode: exclusion;
-    }
-  }
-
-  // Blend mode fix for Microsoft Edge
-  @supports (-ms-ime-align: auto) {
-    .cursor-wrapper {
-      &.has-blend-mode.is-outside {
-        .custom-cursor {
-          &__outer {
-            border-color: black;
-          }
-          &__inner {
-            &:before,
-            &:after {
-              background: black;
-            }
-          }
-        }
-      }
     }
   }
 
@@ -183,17 +164,6 @@ $white: #fff;
         transform: translateX(-50%) rotate(0deg);
       }
     }
-  }
-}
-
-// hide demo content on mobile
-@media (pointer: coarse) {
-  .content--demo1,
-  .content--demo2,
-  .content--demo3,
-  .content--demo4,
-  .content--demo5 {
-    display: none !important;
   }
 }
 
