@@ -41,6 +41,15 @@ const links = document.querySelectorAll("nav a");
 // Listen the `NAVIGATE_IN` event
 // This event is sent everytime a `data-router-view` is added to the DOM Tree
 H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
+  // Analytics
+  if (typeof gtag !== "undefined") {
+    // eslint-disable-next-line
+    gtag("config", "UA-146068141-1", {
+      page_path: location.pathname,
+      page_title: to.page.title,
+      page_location: location.href
+    });
+  }
   // Check Active Link
   for (let i = 0; i < links.length; i++) {
     const link = links[i];
