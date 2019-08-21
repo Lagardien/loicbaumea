@@ -25,14 +25,7 @@
   </head>
 
   <body class="page">
-   
-
-    <div class="cursor-wrapper">
-      <div class="custom-cursor custom-cursor__outer">
-        <div class="custom-cursor custom-cursor__inner"></div>
-      </div>
-    </div>
-
+     
 <div class="left-border"></div>
     <div class="right-border"></div>
     <header class="site-header">
@@ -51,9 +44,13 @@
         </ul>
       </nav>
     </header>
-  
     <main data-router-wrapper>
       <section data-router-view="home" class="home">
+           <div class="cursor-wrapper">
+      <div class="custom-cursor custom-cursor__outer">
+        <div class="custom-cursor custom-cursor__inner"></div>
+      </div>
+    </div>
         <div class="home-content">
           <video autoplay muted loop id="home-video" class="home-video">
             <source src="/media/home-video.webm" type="video/webm" />

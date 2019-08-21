@@ -102,7 +102,7 @@ $white: #fff;
 .page {
   &,
   a {
-    // cursor: none !important;
+    cursor: none !important;
   }
 
   .cursor-wrapper {
@@ -430,7 +430,7 @@ footer {
     background: none;
     border: none;
     color: $blue;
-    cursor: pointer;
+    cursor: none;
     font-size: 5vw;
     transition: 300ms ease-in-out;
   }
@@ -595,8 +595,6 @@ footer {
 }
 
 /* Responsive */
-
-//smartphone
 
 @media (max-width: 769px) {
   .page {

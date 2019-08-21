@@ -9,8 +9,9 @@ $(window).on("load", function() {
 import Cursor from "./cursor";
 
 if (document.querySelector(".page")) {
-  // const cursor = new Cursor();
+  const cursor = new Cursor();
 }
+
 /* Particles */
 
 import { Particles } from "./particles-config";
@@ -102,7 +103,7 @@ H.on("NAVIGATE_OUT", ({ from, trigger, location }) => {});
 // This event is sent everytime the `done()` method is called in the `in()` method of a transition
 H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
   if (document.querySelector(".page")) {
-    //const cursor = new Cursor();
+    const cursor = new Cursor();
   }
   if (document.querySelector(".projects")) {
     let isotope = Isotope();
