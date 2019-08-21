@@ -80,7 +80,6 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
     var element = document.getElementsByClassName("about-bg")[0];
 
     image.onload = function() {
-      console.log("loaded image");
       element.style.backgroundImage = "url('" + this.src + "')";
       element.style.opacity = 1;
     };

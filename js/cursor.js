@@ -56,11 +56,9 @@ class Cursor {
     mainNavItems.forEach(el => {
       el.addEventListener("mouseenter", () => {
         this.mainNavHoverTween.play();
-        console.log("mouseenter");
       });
       el.addEventListener("mouseleave", () => {
         this.mainNavHoverTween.reverse();
-        console.log("mouseleave");
       });
     });
   }
