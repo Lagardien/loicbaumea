@@ -111,4 +111,8 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
   if (document.querySelector(".grid")) {
     const UniversalTilt = require("universal-tilt.js");
   }
+
+  $("img").bind("contextmenu", function(e) {
+    return false;
+  });
 });
