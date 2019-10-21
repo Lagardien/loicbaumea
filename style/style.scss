@@ -285,9 +285,17 @@ footer {
   position: fixed;
   bottom: 0;
   p {
+    width: 100%;
     font-size: 14px;
     margin-left: 50px;
     color: $white;
+  }
+  a {
+    font-weight: normal;
+    color: $white;
+    position: absolute;
+    right: 50px;
+    top: 14px;
   }
 }
 
