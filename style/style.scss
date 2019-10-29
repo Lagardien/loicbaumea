@@ -204,6 +204,10 @@ body {
       color: $red;
     }
   }
+
+  .particles-js-canvas-el {
+    height: 100vh !important;
+  }
 }
 
 /* Borders */
@@ -418,6 +422,38 @@ footer {
     100% {
       background-position: -100px 0;
       filter: hue-rotate(360deg);
+    }
+  }
+}
+
+/* Infos */
+
+.infos-content {
+  padding: 100px 10%;
+  h2 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .infos-container {
+    display: flex;
+    .infos-left {
+      width: 60%;
+
+      font-size: 2vw;
+      p {
+        margin: 0;
+        margin-top: 30px;
+      }
+    }
+    .infos-right {
+      text-align: right;
+      width: 40%;
+
+      font-size: 2.5vw;
+      p {
+        margin: 0;
+        margin-top: 30px;
+      }
     }
   }
 }
