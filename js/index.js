@@ -64,25 +64,6 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
     .each(function() {
       if (this.complete) $(this).trigger("load");
     });
-
-  // About-bg fadein
-  if (document.querySelector(".about")) {
-    var image = new Image();
-    var element = document.getElementsByClassName("about-bg")[0];
-
-    image.onload = function() {
-      element.style.backgroundImage = "url('" + this.src + "')";
-      element.style.opacity = 1;
-    };
-    image.src =
-      "https://eloquent-davinci-3d0dc2.netlify.com/about-bg.beb021b0.jpg";
-    if (image.complete) image.onload();
-  }
-
-  // Particles
-  if (document.querySelector(".home")) {
-    let particles = Particles();
-  }
 });
 
 // Listen the `NAVIGATE_OUT` event
