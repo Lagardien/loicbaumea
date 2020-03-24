@@ -368,6 +368,8 @@ footer {
     background-size: cover;
     background-position: -100px 0;
     border-radius: 50%;
+    -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    animation: 3s ease 0s normal forwards 1 fadein;
   }
   .about-bg:before {
     content: "";
@@ -422,6 +424,29 @@ footer {
     100% {
       background-position: -100px 0;
       filter: hue-rotate(360deg);
+    }
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    66% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
