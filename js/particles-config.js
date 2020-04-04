@@ -38,7 +38,7 @@ export function Particles() {
           },
           image: {
             src:
-              "https://eloquent-davinci-3d0dc2.netlify.com/avatar-small.5979fb22.png",
+              "https://drive.google.com/uc?id=1lDJuHMVqM_hu4Jqs1kLr6UfmJbeKXDDT",
             width: 100,
             height: 100
           }
