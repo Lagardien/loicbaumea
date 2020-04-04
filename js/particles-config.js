@@ -18,9 +18,9 @@ export function Particles() {
     {
       particles: {
         number: {
-          value: 100,
+          value: 200,
           density: {
-            enable: true,
+            enable: false,
             value_area: 100
           }
         },
@@ -105,10 +105,10 @@ export function Particles() {
             }
           },
           bubble: {
-            distance: 1000,
-            size: 1,
-            duration: 0.1,
-            opacity: 0.8,
+            distance: 500,
+            size: 50,
+            duration: 0.2,
+            opacity: 1,
             speed: 1
           },
           repulse: {
