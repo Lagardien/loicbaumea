@@ -4,7 +4,7 @@ import Highway from "@dogstudio/highway";
 // GSAP Library
 import Tween from "gsap";
 
-const $frameBlack = document.querySelector(".left-border");
+const $frameBlack = document.querySelector(".transition-border");
 
 // Fade
 class Fade extends Highway.Transition {
@@ -19,9 +19,9 @@ class Fade extends Highway.Transition {
     Tween.fromTo(
       $frameBlack,
       1,
-      { width: "100vw" },
+      { width: "100%" },
       {
-        width: "50px",
+        width: "0%",
         transformOrigin: "left",
         ease: Power4.easeInOut,
         onComplete: done,
@@ -34,9 +34,9 @@ class Fade extends Highway.Transition {
     Tween.fromTo(
       $frameBlack,
       1.5,
-      { width: "50px" },
+      { width: "0%" },
       {
-        width: "100vw",
+        width: "100%",
         transformOrigin: "left",
         ease: Power4.easeInOut,
         onComplete: done,
