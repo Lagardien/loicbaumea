@@ -1,6 +1,6 @@
 /* Loader */
 
-$(window).on("load", function() {
+$(window).on("load", function () {
   $(".loader-wrapper").fadeOut("slow");
 });
 
@@ -17,6 +17,11 @@ if (document.querySelector(".page")) {
 import { Particles } from "./particles-config";
 let particles = Particles();
 
+/* Noise */
+
+import { Noise } from "./noise";
+let noise = Noise();
+
 /* Isotope */
 
 import { Isotope } from "./isotope";
@@ -32,8 +37,8 @@ import Fade from "./transition.js";
 // Call Highway.Core once.
 const H = new Highway.Core({
   transitions: {
-    default: Fade
-  }
+    default: Fade,
+  },
 });
 
 // Menu
@@ -42,6 +47,9 @@ const links = document.querySelectorAll("nav a");
 // Listen the `NAVIGATE_IN` event
 // This event is sent everytime a `data-router-view` is added to the DOM Tree
 H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
+  if (document.querySelector(".grid")) {
+    const UniversalTilt = require("universal-tilt.js");
+  }
   // Check Active Link
   for (let i = 0; i < links.length; i++) {
     const link = links[i];
@@ -58,10 +66,10 @@ H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
   // Images fadein
   $("img")
     .hide()
-    .one("load", function() {
+    .one("load", function () {
       $(this).fadeIn("slow");
     })
-    .each(function() {
+    .each(function () {
       if (this.complete) $(this).trigger("load");
     });
 });
@@ -73,6 +81,8 @@ H.on("NAVIGATE_OUT", ({ from, trigger, location }) => {});
 // Listen the `NAVIGATE_END` event
 // This event is sent everytime the `done()` method is called in the `in()` method of a transition
 H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
+  let noise = Noise();
+
   if (document.querySelector(".page")) {
     const cursor = new Cursor();
   }
@@ -80,11 +90,7 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
     let isotope = Isotope();
   }
 
-  if (document.querySelector(".grid")) {
-    const UniversalTilt = require("universal-tilt.js");
-  }
-
-  $("img").bind("contextmenu", function(e) {
+  $("img").bind("contextmenu", function (e) {
     return false;
   });
 });
