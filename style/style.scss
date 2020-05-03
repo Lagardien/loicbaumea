@@ -877,4 +877,22 @@ footer {
       font-size: 1.5rem;
     }
   }
+
+  .infos-content {
+    font-size: 1.5rem;
+    h2 {
+      font-size: 9vw;
+    }
+    .infos-container {
+      display: block;
+      .infos-left {
+        font-size: 1.5rem;
+        width: 100%;
+      }
+      .infos-right {
+        font-size: 1.5rem;
+        width: 100%;
+      }
+    }
+  }
 }
