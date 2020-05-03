@@ -475,17 +475,17 @@ footer {
   }
 }
 
-/* Infos */
+/* Info */
 
-.infos-content {
+.info-content {
   padding: 100px 10%;
   h2 {
     font-size: 4vw;
     text-align: center;
   }
-  .infos-container {
+  .info-container {
     display: flex;
-    .infos-left {
+    .info-left {
       width: 60%;
 
       font-size: 2vw;
@@ -494,7 +494,7 @@ footer {
         margin-top: 30px;
       }
     }
-    .infos-right {
+    .info-right {
       text-align: right;
       width: 40%;
 
@@ -878,18 +878,18 @@ footer {
     }
   }
 
-  .infos-content {
+  .info-content {
     font-size: 1.5rem;
     h2 {
       font-size: 9vw;
     }
-    .infos-container {
+    .info-container {
       display: block;
-      .infos-left {
+      .info-left {
         font-size: 1.5rem;
         width: 100%;
       }
-      .infos-right {
+      .info-right {
         font-size: 1.5rem;
         width: 100%;
       }
